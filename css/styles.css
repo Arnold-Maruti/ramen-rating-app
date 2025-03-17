@@ -39,3 +39,8 @@ input{
 #t52{
    padding: 30px 150px;
 }
+#ramen-menu,#ramen-detail{
+    border: 100px solid black;
+    display: flex;
+    margin:20px;
+}
