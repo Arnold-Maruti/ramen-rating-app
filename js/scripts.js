@@ -4,7 +4,15 @@ const ramens = [
     { id: 3, name: "Tonkotsu Ramen", restaurant: "Ramen-ya", image: "https://moringa.instructure.com/courses/967/files/517798/preview", rating: 3,comment:"awsome" },
     {id: 4, name:"Naruto Ramen", restaurant:"suzuki", image:"https://moringa.instructure.com/courses/967/files/517799/preview", rating:6, comment:"perfect"},
     {id:5, name:"kimichi ramen", restaurant:"biko", image:"https://moringa.instructure.com/courses/967/files/517797/preview", rating: 7, comment:"incredible"}
- ];
+ ]; 
+ 
+function main(){
+   displayRamen();
+   addSubmitListener();
+}
+main();
+
+
  
  function displayRamen(){
     const menu=document.getElementById("ramen-menu");
@@ -44,23 +52,3 @@ function handleClick(ramen){
    details.appendChild(comment);
    
 }
-
-
-
-  
-function addSubmitListener(){
-   button.addEventListener('click',()=>formSubmitted())
-}
-function formSubmitted(){
-   ramens.push()
-}
- 
-
- 
-
-
- function main(){
-    displayRamen();
-    addSubmitListener();
- }
-main();
