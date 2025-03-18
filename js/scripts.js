@@ -11,16 +11,56 @@ const ramens = [
     menu.innerHTML= ``;
     ramens.forEach((ramen)=>{
          const images=document.createElement("img");
-        images.src=ramen.image;
-        images.alt=ramen.name;
+         images.src=ramen.image;
+         images.alt=ramen.name;
+         images.addEventListener('click', () => handleClick(ramen))
         menu.appendChild(images)
-        images.addEventListener('click',ramenDetailsDisplay)
         
       })
  }
- displayRamen()
+ 
+function handleClick(ramen){
+   const details=document.getElementById("ramen-detail")
+   const images=document.createElement("img");
+   images.src=ramen.image;
+   images.alt=ramen.name;   
 
+   const name=document.createElement("p");
+   const restaurant=document.createElement("p");
+   const rating=document.createElement("p");
+   const comment=document.createElement("p");
+
+   details.innerHTML = ""
+
+   name.innerHTML=`name:${ramen.name}`;
+   restaurant.innerHTML=`restaurant:${ramen.restaurant}`;
+   rating.innerHTML=`rating:${ramen.rating}`;
+   comment.innerHTML=`comment:${ramen.comment}`;
+
+   details.appendChild(images);
+   details.appendChild(name);
+   details.appendChild(restaurant);
+   details.appendChild(rating);
+   details.appendChild(comment);
+   
+}
+
+
+
+  
+function addSubmitListener(){
+   button.addEventListener('click',()=>formSubmitted())
+}
+function formSubmitted(){
+   ramens.push()
+}
+ 
 
  
- 
 
+
+ function main(){
+    displayRamen();
+    addSubmitListener();
+ }
+main();
