@@ -69,14 +69,21 @@ function submitDetails(){
    const image_value=image_detail.value;
    const rating_value=rating_detail.value;
    const comment_value=comment_detail.value;
-   console.log(name_value);
    
-   ramens.name=name_value;
-   ramens.restaurant=restaurant_value;
-   ramens.rating=rating_value;
-   ramens.image=image_value;
-   ramens.comment=comment_value;
+   
+   
 
+   const newArray={
+      id: ramens.lenght+1,
+      name:name_value,
+      restaurant: restaurant_value,
+      image: image_value,
+      rating: rating_value,
+      comment: comment_value
+
+   };
+
+   ramens.push(newArray);
 
    displayRamen();
 
