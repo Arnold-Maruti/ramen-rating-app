@@ -52,3 +52,33 @@ function handleClick(ramen){
    details.appendChild(comment);
    
 }
+function addSubmitListener(){
+   const button=document.getElementById("t62")
+   button.addEventListener('click',()=> submitDetails())
+}
+
+function submitDetails(){
+   const name_detail=document.getElementById("t1")
+   const restaurant_detail=document.getElementById("t2")
+   const image_detail=document.getElementById("t3")
+   const rating_detail=document.getElementById("t4")
+   const comment_detail=document.getElementById("t52")
+
+   const name_value=name_detail .value;
+   const restaurant_value=restaurant_detail.value;
+   const image_value=image_detail.value;
+   const rating_value=rating_detail.value;
+   const comment_value=comment_detail.value;
+   console.log(name_value);
+   
+   ramens.name=name_value;
+   ramens.restaurant=restaurant_value;
+   ramens.rating=rating_value;
+   ramens.image=image_value;
+   ramens.comment=comment_value;
+
+
+   displayRamen();
+
+
+}
