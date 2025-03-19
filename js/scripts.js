@@ -86,6 +86,9 @@ function submitDetails(){
    ramens.push(newArray);
 
    displayRamen();
+   
+   console.log(name_value);
+   ;
 
 
 }
